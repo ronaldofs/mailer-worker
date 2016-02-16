@@ -1,0 +1,21 @@
+{
+  "name": "mailer-worker",
+  "version": "1.0.0",
+  "description": "Email sending service worker listening on a queue",
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist/index.js",
+    "production": "npm run build && pm2 start dist/index.js --name mailer-worker && pm2 logs"
+  },
+  "author": "ronaldofs",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0"
+  },
+  "dependencies": {
+    "nodemailer": "^2.1.0",
+    "pm2": "^1.0.1",
+    "rabbit.js": "^0.4.4"
+  }
+}
