@@ -8,4 +8,4 @@ ADD . /src
 
 WORKDIR /src
 
-CMD ["npm", "run", "production"]
+# CMD ["npm", "run", "production"]
